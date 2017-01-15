@@ -1,10 +1,16 @@
-.btn {
+.btn-template (
+  @buttonFontColor, @buttonBorderColor, @buttonBackgroundColor1, @buttonBackgroundColor2,
+  @buttonHoverFontColor, @buttonHoverBackgroundColor1, @buttonHoverBackgroundColor2,
+  @buttonActiveFontColor, @buttonActiveBorderColor, @buttonActiveBoxShadow,
+    @buttonActiveBackgroundColor1,@buttonActiveBackgroundColor2
+) {
   color: @buttonFontColor;
   border: 1px solid @buttonBorderColor;
   .btn-bgcolor-2(@buttonBackgroundColor1, @buttonBackgroundColor2);
 
   &:hover {
     color: @buttonHoverFontColor;
+    border: 1px solid @buttonActiveBorderColor;
     .btn-bgcolor-2(@buttonHoverBackgroundColor1, @buttonHoverBackgroundColor2);
   }
 
@@ -18,21 +24,103 @@
   }
 }
 
-.btn.focus {
-  color: @buttonFocusFontColor;
-  border: 1px solid @buttonFocusBorderColor;
-  .btn-bgcolor-2(@buttonFocusBackgroundColor1, @buttonFocusBackgroundColor2);
+.btn-outline-template (
+  @buttonFontColor, @buttonBorderColor, @buttonBackgroundColor1, @buttonBackgroundColor2
+) {
+  outline:none;
+  color: @buttonFontColor;
+  border: 1px solid @buttonBorderColor;
+  .btn-bgcolor-2(@buttonBackgroundColor1, @buttonBackgroundColor2);
 
-  &:hover {
-    .btn-bgcolor-2(@buttonFocusHoverBackgroundColor1, @buttonFocusHoverBackgroundColor2);
+  > * {
+    outline:none;
   }
 
   &.active, &:active {
     &:not([disabled]) {
-      color: @buttonFocusActiveFontColor;
-      border: 1px solid @buttonFocusActiveBorderColor;
-      .box-shadow(@buttonFocusActiveBoxShadow);
-      .btn-bgcolor-2(@buttonFocusActiveBackgroundColor1, @buttonFocusActiveBackgroundColor2);
+      .box-shadow(none);
+    }
+  }
+
+}
+
+.btn {
+  .btn-template (
+      @baseNormalFontColor, @baseNormalBorderColor, @baseNormalBackgroundColor1, @baseNormalBackgroundColor2,
+      @baseNormalHoverFontColor, @baseNormalHoverBackgroundColor1, @baseNormalHoverBackgroundColor2,
+      @baseNormalActiveFontColor, @baseNormalActiveBorderColor, @baseNormalActiveBoxShadow,
+      @baseNormalActiveBackgroundColor1,@baseNormalActiveBackgroundColor2
+  );
+
+  &.normal {
+    .btn-template (
+            @baseNormalFontColor, @baseNormalBorderColor,@baseNormalBackgroundColor1, @baseNormalBackgroundColor2,
+            @baseNormalHoverFontColor, @baseNormalHoverBackgroundColor1, @baseNormalHoverBackgroundColor2,
+            @baseNormalActiveFontColor, @baseNormalActiveBorderColor, @baseNormalActiveBoxShadow,
+            @baseNormalActiveBackgroundColor1,@baseNormalActiveBackgroundColor2
+    );
+
+  }
+
+  &.focus {
+    .btn-template (
+            @baseFocusFontColor,@baseFocusBorderColor, @baseFocusBackgroundColor1, @baseFocusBackgroundColor2,
+            @baseFocusHoverFontColor, @baseFocusHoverBackgroundColor1, @baseFocusHoverBackgroundColor2,
+            @baseFocusActiveFontColor, @baseFocusActiveBorderColor, @baseFocusActiveBoxShadow,
+            @baseFocusActiveBackgroundColor1,@baseFocusActiveBackgroundColor2
+    );
+
+    &.outline {
+      .btn-outline-template (
+              @baseFocusBorderColor,@baseFocusBorderColor, @baseFocusFontColor, @baseFocusFontColor
+      );
+    }
+  }
+
+  &.danger {
+    .btn-template (
+            @baseDangerFontColor, @baseDangerBorderColor,@baseDangerBackgroundColor1, @baseDangerBackgroundColor2,
+            @baseDangerHoverFontColor, @baseDangerHoverBackgroundColor1, @baseDangerHoverBackgroundColor2,
+            @baseDangerActiveFontColor, @baseDangerActiveBorderColor, @baseDangerActiveBoxShadow,
+            @baseDangerActiveBackgroundColor1,@baseDangerActiveBackgroundColor2
+    );
+
+    &.outline {
+      .btn-outline-template (
+              @baseDangerBorderColor,@baseDangerBorderColor, @baseDangerFontColor, @baseDangerFontColor
+      );
+    }
+  }
+
+  &.success {
+    .btn-template (
+            @baseSuccessFontColor, @baseSuccessBorderColor,@baseSuccessBackgroundColor1, @baseSuccessBackgroundColor2,
+            @baseSuccessHoverFontColor, @baseSuccessHoverBackgroundColor1, @baseSuccessHoverBackgroundColor2,
+            @baseSuccessActiveFontColor, @baseSuccessActiveBorderColor, @baseSuccessActiveBoxShadow,
+            @baseSuccessActiveBackgroundColor1,@baseSuccessActiveBackgroundColor2
+    );
+
+
+    &.outline {
+      .btn-outline-template (
+              @baseSuccessBorderColor,@baseSuccessBorderColor, @baseSuccessFontColor, @baseSuccessFontColor
+      );
+    }
+  }
+
+  &.warning {
+    .btn-template (
+            @baseWarningFontColor, @baseWarningBorderColor, @baseWarningBackgroundColor1, @baseWarningBackgroundColor2,
+            @baseWarningHoverFontColor, @baseWarningHoverBackgroundColor1, @baseWarningHoverBackgroundColor2,
+            @baseWarningActiveFontColor, @baseWarningActiveBorderColor, @baseWarningActiveBoxShadow,
+            @baseWarningActiveBackgroundColor1,@baseWarningActiveBackgroundColor2
+    );
+
+
+    &.outline {
+      .btn-outline-template (
+              @baseWarningBorderColor,@baseWarningBorderColor, @baseWarningFontColor, @baseWarningFontColor
+      );
     }
   }
 }
