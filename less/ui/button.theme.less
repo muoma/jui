@@ -36,6 +36,12 @@
     outline:none;
   }
 
+  &:hover {
+    color: @buttonBackgroundColor1;
+    border: 1px solid @buttonBorderColor;
+    .btn-bgcolor-2(@buttonFontColor, @buttonBorderColor);
+  }
+
   &.active, &:active {
     &:not([disabled]) {
       .box-shadow(none);

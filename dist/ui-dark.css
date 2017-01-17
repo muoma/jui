@@ -1332,6 +1332,16 @@
 .jui .btn.focus.outline > * {
   outline: none;
 }
+.jui .btn.focus.outline:hover {
+  color: #fff;
+  border: 1px solid #9663f4;
+  background-color: #9663f4;
+  background-image: -moz-linear-gradient(top, #9663f4 0%, #9663f4 100%);
+  background-image: linear-gradient(top, #9663f4 0%, #9663f4 100%);
+  background-image: -webkit-linear-gradient(top, #9663f4 0%, #9663f4 100%);
+  background-image: -o-linear-gradient(top, #9663f4 0%, #9663f4 100%);
+  background-image: -ms-linear-gradient(top, #9663f4 0%, #9663f4 100%);
+}
 .jui .btn.focus.outline.active:not([disabled]),
 .jui .btn.focus.outline:active:not([disabled]) {
   -webkit-box-shadow: none;
@@ -1385,6 +1395,16 @@
 }
 .jui .btn.danger.outline > * {
   outline: none;
+}
+.jui .btn.danger.outline:hover {
+  color: #fff;
+  border: 1px solid #fa4f52;
+  background-color: #fa4f52;
+  background-image: -moz-linear-gradient(top, #fa4f52 0%, #fa4f52 100%);
+  background-image: linear-gradient(top, #fa4f52 0%, #fa4f52 100%);
+  background-image: -webkit-linear-gradient(top, #fa4f52 0%, #fa4f52 100%);
+  background-image: -o-linear-gradient(top, #fa4f52 0%, #fa4f52 100%);
+  background-image: -ms-linear-gradient(top, #fa4f52 0%, #fa4f52 100%);
 }
 .jui .btn.danger.outline.active:not([disabled]),
 .jui .btn.danger.outline:active:not([disabled]) {
@@ -1440,6 +1460,16 @@
 .jui .btn.success.outline > * {
   outline: none;
 }
+.jui .btn.success.outline:hover {
+  color: #fff;
+  border: 1px solid #32c183;
+  background-color: #32c183;
+  background-image: -moz-linear-gradient(top, #32c183 0%, #32c183 100%);
+  background-image: linear-gradient(top, #32c183 0%, #32c183 100%);
+  background-image: -webkit-linear-gradient(top, #32c183 0%, #32c183 100%);
+  background-image: -o-linear-gradient(top, #32c183 0%, #32c183 100%);
+  background-image: -ms-linear-gradient(top, #32c183 0%, #32c183 100%);
+}
 .jui .btn.success.outline.active:not([disabled]),
 .jui .btn.success.outline:active:not([disabled]) {
   -webkit-box-shadow: none;
@@ -1493,6 +1523,16 @@
 }
 .jui .btn.warning.outline > * {
   outline: none;
+}
+.jui .btn.warning.outline:hover {
+  color: #fff;
+  border: 1px solid #fdbf2d;
+  background-color: #fdbf2d;
+  background-image: -moz-linear-gradient(top, #fdbf2d 0%, #fdbf2d 100%);
+  background-image: linear-gradient(top, #fdbf2d 0%, #fdbf2d 100%);
+  background-image: -webkit-linear-gradient(top, #fdbf2d 0%, #fdbf2d 100%);
+  background-image: -o-linear-gradient(top, #fdbf2d 0%, #fdbf2d 100%);
+  background-image: -ms-linear-gradient(top, #fdbf2d 0%, #fdbf2d 100%);
 }
 .jui .btn.warning.outline.active:not([disabled]),
 .jui .btn.warning.outline:active:not([disabled]) {
